@@ -1,0 +1,40 @@
+t = 2
+p = 0.5
+Num of channels = 3
+Buffer size = 5
+
+1 m1						buffer: 
+2		m1+ ->
+3 m2						buffer: 
+4		m2- error in channel
+5 m3						buffer: 
+6		m3- error in channel
+7 m4						buffer: 
+8		m4- error in channel
+9 m2						buffer: 
+10		m2- error in channel
+11 m3						buffer: 
+12		m3- error in channel
+13 m4						buffer: 
+14		m4+ to buf
+15 m2						buffer: 4 
+16		m2- error in channel
+17 m3						buffer: 4 
+18		m3+ to buf
+19 m5						buffer: 3 4 
+20		m5+ to buf
+21 m2						buffer: 5 3 4 
+22		m2+ ->
+23		m3 from buf ->
+24		m4 from buf ->
+25		m5 from buf ->
+26 m6						buffer: 
+27		m6+ ->
+28 m7						buffer: 
+29		m7+ ->
+30 m8						buffer: 
+31		m8+ ->
+32 m9						buffer: 
+33		m9+ ->
+34 m10						buffer: 
+35		m10+ ->
