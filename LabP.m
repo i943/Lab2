@@ -8,7 +8,7 @@ n = 200;
 p = 0:0.1:1;
 tao = 2;
 num_channels = tao+1;
-buf_size = 5;
+buf_size = 1;
 
 kpd = zeros(1, length(p));
 N = zeros(1, length(p));
